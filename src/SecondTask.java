@@ -6,6 +6,7 @@ import java.util.Collections;
 
 public class SecondTask {
     public static void main(String[] args) {
+        // 4 задание
         String fileName = ""; // Указать путь к файлу
         ArrayList<String> lines = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
