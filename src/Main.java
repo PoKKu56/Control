@@ -5,12 +5,15 @@ public class Main {
         //Задание 5
         Scanner in = new Scanner(System.in);
         String line = in.nextLine();
+        check_elements(line);
+    }
+    public static void check_elements(String line) {
         Stack<Character> elements = new Stack<>();
         for (int i = 0; i < line.length(); i++){
             if (line.charAt(i) != ']' && line.charAt(i) != ')' && line.charAt(i) != '}'){
                 elements.push(line.charAt(i));
             } else if ((line.charAt(i) == ']' && elements.peek() == '[') || (line.charAt(i) == ')' && elements.peek() == '(')
-            || (line.charAt(i) == '}' && elements.peek() == '{')){
+                    || (line.charAt(i) == '}' && elements.peek() == '{')){
                 elements.pop();
             }
         }
